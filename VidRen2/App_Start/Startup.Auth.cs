@@ -54,9 +54,9 @@ namespace VidRen2
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "377197406282263",
+               appSecret: "3e448ff745c0e60a2c11db6c08f485d4");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
