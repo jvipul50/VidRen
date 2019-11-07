@@ -19,11 +19,15 @@
                 @Html.ActionLink("VidRen", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
+                @if (User.Identity.IsAuthenticated)
+                {
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("New Rental", "New", "Rentals")</li>
                     <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
                     <li>@Html.ActionLink("Movies", "Index", "Movies")</li>
                 </ul>
+                }
+                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
@@ -31,7 +35,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - VidRen</p>
+            <p style="text-align:center;">&copy; @DateTime.Now.Year - VidRen</p>
          </footer>
     </div>
 
